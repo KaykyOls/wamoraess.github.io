@@ -1,0 +1,732 @@
+/* ============================================
+   W.A Moraes Peças e Acessórios Automotivos
+   Arquivo: style.css
+   Desenvolvimento Front-End II
+   ============================================ */
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #111111;
+}
+
+/* ============================================
+   HEADER E NAVEGAÇÃO
+   ============================================ */
+
+header {
+    background-color: #111111;
+    padding: 15px 20px;
+}
+
+.header-topo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.logo-icone {
+    background-color: #FFD400;
+    color: #111111;
+    font-size: 22px;
+    font-weight: bold;
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-texto span {
+    display: block;
+    color: #FFD400;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.logo-texto small {
+    color: #cccccc;
+    font-size: 11px;
+}
+
+nav {
+    background-color: #1a1a1a;
+    border-top: 2px solid #FFD400;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 13px 18px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+nav ul li a:hover {
+    background-color: #FFD400;
+    color: #111111;
+}
+
+nav ul li a.ativo {
+    background-color: #FFD400;
+    color: #111111;
+}
+
+/* ============================================
+   MAIN / CONTEÚDO PRINCIPAL
+   ============================================ */
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+/* ============================================
+   BANNER (index.html)
+   ============================================ */
+
+.banner {
+    background-color: #111111;
+    color: #ffffff;
+    padding: 60px 40px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 40px;
+    border-bottom: 4px solid #FFD400;
+}
+
+.banner h1 {
+    font-size: 32px;
+    color: #FFD400;
+    margin-bottom: 10px;
+}
+
+.banner p {
+    font-size: 16px;
+    color: #cccccc;
+    margin-bottom: 25px;
+}
+
+.btn-amarelo {
+    display: inline-block;
+    background-color: #FFD400;
+    color: #111111;
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.btn-amarelo:hover {
+    background-color: #e6bf00;
+}
+
+/* ============================================
+   DESTAQUES E SEÇÕES
+   ============================================ */
+
+.titulo-secao {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 25px;
+    color: #111111;
+    border-bottom: 3px solid #FFD400;
+    padding-bottom: 10px;
+}
+
+.destaques {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.card-destaque {
+    flex: 1;
+    min-width: 220px;
+    background-color: #f5f5f5;
+    border: 1px solid #dddddd;
+    border-top: 4px solid #FFD400;
+    border-radius: 6px;
+    padding: 25px 20px;
+    text-align: center;
+}
+
+.card-destaque h3 {
+    font-size: 17px;
+    margin-bottom: 10px;
+    color: #111111;
+}
+
+.card-destaque p {
+    font-size: 14px;
+    color: #555555;
+    line-height: 1.6;
+}
+
+.icone-destaque {
+    font-size: 36px;
+    margin-bottom: 12px;
+}
+
+.apresentacao {
+    background-color: #f9f9f9;
+    border-left: 5px solid #FFD400;
+    padding: 25px;
+    border-radius: 5px;
+    margin-bottom: 40px;
+}
+
+.apresentacao h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.apresentacao p {
+    font-size: 15px;
+    color: #444444;
+    line-height: 1.7;
+}
+
+/* ============================================
+   PÁGINA SOBRE
+   ============================================ */
+
+.sobre-intro {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 35px;
+}
+
+.sobre-texto {
+    flex: 1;
+    min-width: 250px;
+}
+
+.sobre-texto h2 {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.sobre-texto p {
+    font-size: 15px;
+    color: #444444;
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+
+.missao-visao {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 35px;
+}
+
+.card-mv {
+    flex: 1;
+    min-width: 220px;
+    background-color: #111111;
+    color: #ffffff;
+    padding: 25px;
+    border-radius: 6px;
+    border-top: 4px solid #FFD400;
+}
+
+.card-mv h3 {
+    font-size: 17px;
+    color: #FFD400;
+    margin-bottom: 10px;
+}
+
+.card-mv p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #cccccc;
+}
+
+.valores-lista {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.valores-lista li {
+    background-color: #FFD400;
+    color: #111111;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.diferenciais {
+    background-color: #f5f5f5;
+    padding: 25px;
+    border-radius: 6px;
+}
+
+.diferenciais h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.diferenciais ul {
+    list-style: none;
+    padding: 0;
+}
+
+.diferenciais ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid #dddddd;
+    font-size: 14px;
+    color: #444444;
+}
+
+.diferenciais ul li:last-child {
+    border-bottom: none;
+}
+
+.diferenciais ul li::before {
+    content: "✔ ";
+    color: #FFD400;
+    font-weight: bold;
+}
+
+/* ============================================
+   PÁGINA PRODUTOS (produtos.html) - CATEGORIAS
+   ============================================ */
+
+.intro-produtos {
+    background-color: #f9f9f9;
+    border-left: 5px solid #FFD400;
+    padding: 20px 25px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    font-size: 15px;
+    color: #444444;
+    line-height: 1.7;
+}
+
+.categorias-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.card-categoria {
+    flex: 1;
+    min-width: 230px;
+    background-color: #f5f5f5;
+    border: 1px solid #dddddd;
+    border-top: 4px solid #FFD400;
+    border-radius: 8px;
+    padding: 25px 20px;
+    text-align: center;
+}
+
+.card-categoria .icone-categoria {
+    font-size: 42px;
+    margin-bottom: 12px;
+}
+
+.card-categoria h3 {
+    font-size: 17px;
+    margin-bottom: 10px;
+    color: #111111;
+}
+
+.card-categoria p {
+    font-size: 14px;
+    color: #555555;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+/* ============================================
+   PÁGINAS DE CATEGORIA — CARDS BOOTSTRAP
+   ============================================ */
+
+.link-voltar {
+    display: inline-block;
+    color: #111111;
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    padding: 6px 12px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    background-color: #f5f5f5;
+}
+
+.link-voltar:hover {
+    background-color: #FFD400;
+    border-color: #FFD400;
+    color: #111111;
+    text-decoration: none;
+}
+
+.desc-categoria {
+    background-color: #f9f9f9;
+    border-left: 5px solid #FFD400;
+    padding: 18px 22px;
+    border-radius: 5px;
+    margin-bottom: 28px;
+    font-size: 15px;
+    color: #444444;
+    line-height: 1.7;
+}
+
+/* Estilo personalizado sobre os cards do Bootstrap */
+.card-produto-bs {
+    border: 1px solid #dddddd !important;
+    border-top: 4px solid #FFD400 !important;
+    border-radius: 8px !important;
+    overflow: hidden;
+    height: 100%;
+}
+
+.card-produto-bs .card-img-placeholder {
+    background-color: #222222;
+    height: 155px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 52px;
+}
+
+.card-produto-bs .card-body {
+    padding: 16px;
+}
+
+.card-produto-bs .card-title {
+    font-size: 15px;
+    font-weight: bold;
+    color: #111111;
+}
+
+.card-produto-bs .card-text {
+    font-size: 13px;
+    color: #666666;
+    line-height: 1.5;
+}
+
+.preco-produto-bs {
+    font-size: 19px;
+    font-weight: bold;
+    color: #111111;
+    border-top: 2px solid #FFD400;
+    padding-top: 10px;
+    margin-top: 8px;
+    margin-bottom: 10px;
+}
+
+/* ============================================
+   PÁGINA NOVIDADES
+   ============================================ */
+
+.novidades-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.card-novidade {
+    flex: 1;
+    min-width: 260px;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+.card-novidade-img-placeholder {
+    width: 100%;
+    height: 160px;
+    background-color: #111111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 44px;
+}
+
+.card-novidade-info {
+    padding: 18px;
+}
+
+.tag-novidade {
+    display: inline-block;
+    background-color: #FFD400;
+    color: #111111;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 3px 10px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.card-novidade-info h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #111111;
+}
+
+.card-novidade-info p {
+    font-size: 13px;
+    color: #555555;
+    line-height: 1.6;
+}
+
+.data-novidade {
+    font-size: 12px;
+    color: #999999;
+    margin-top: 10px;
+}
+
+/* ============================================
+   PÁGINA CONTATO
+   ============================================ */
+
+.contato-wrapper {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.formulario-contato {
+    flex: 2;
+    min-width: 280px;
+}
+
+.formulario-contato h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.grupo-campo {
+    margin-bottom: 15px;
+}
+
+.grupo-campo label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333333;
+}
+
+.grupo-campo input,
+.grupo-campo textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    color: #111111;
+}
+
+.grupo-campo input:focus,
+.grupo-campo textarea:focus {
+    outline: none;
+    border-color: #FFD400;
+}
+
+.grupo-campo textarea {
+    height: 130px;
+    resize: vertical;
+}
+
+.btn-enviar {
+    background-color: #111111;
+    color: #FFD400;
+    border: none;
+    padding: 12px 30px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-enviar:hover {
+    background-color: #FFD400;
+    color: #111111;
+}
+
+.info-contato {
+    flex: 1;
+    min-width: 220px;
+}
+
+.info-contato h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.info-contato p {
+    font-size: 14px;
+    color: #444444;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.info-contato strong {
+    color: #111111;
+}
+
+.redes-sociais {
+    margin-top: 25px;
+}
+
+.redes-sociais h3 {
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.link-social {
+    display: block;
+    background-color: #f5f5f5;
+    border: 1px solid #dddddd;
+    color: #111111;
+    text-decoration: none;
+    padding: 10px 14px;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.link-social:hover {
+    background-color: #FFD400;
+    border-color: #FFD400;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+footer {
+    background-color: #111111;
+    color: #cccccc;
+    padding: 30px 20px;
+    margin-top: 40px;
+    border-top: 3px solid #FFD400;
+}
+
+.footer-conteudo {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-bloco h4 {
+    color: #FFD400;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.footer-bloco p,
+.footer-bloco address {
+    font-size: 13px;
+    line-height: 1.8;
+    font-style: normal;
+    color: #aaaaaa;
+}
+
+.footer-copy {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #333333;
+    font-size: 12px;
+    color: #777777;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ============================================
+   RESPONSIVIDADE - MEDIA QUERY
+   ============================================ */
+
+@media (max-width: 700px) {
+
+    .header-topo {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li a {
+        padding: 10px 15px;
+        border-bottom: 1px solid #333333;
+    }
+
+    .banner {
+        padding: 35px 20px;
+    }
+
+    .banner h1 {
+        font-size: 24px;
+    }
+
+    .destaques,
+    .missao-visao,
+    .categorias-grid,
+    .novidades-grid,
+    .contato-wrapper,
+    .sobre-intro {
+        flex-direction: column;
+    }
+
+    .footer-conteudo {
+        flex-direction: column;
+        gap: 20px;
+    }
+}

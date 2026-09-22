@@ -1,0 +1,116 @@
+// ============================================
+//  W.A Moraes Peças e Acessórios Automotivos
+//  Arquivo: js/script.js
+//  Aluno: 1º Trimestre - Desenvolvimento Front-End
+//  Funcionalidade: Validação do formulário de contato
+// ============================================
+
+
+// Aguarda o carregamento completo da página antes de executar o código
+document.addEventListener("DOMContentLoaded", function () {
+
+
+    // ============================================
+    //  MÁSCARA DO TELEFONE
+    //  Formata o número automaticamente enquanto o usuário digita:
+    //  (XX) XXXX-XXXX  ou  (XX) XXXXX-XXXX
+    // ============================================
+
+    var campoTelefone = document.getElementById("telefone");
+
+    campoTelefone.addEventListener("input", function () {
+
+        // Remove tudo que não for número
+        var valor = campoTelefone.value.replace(/\D/g, "");
+
+        // Limita a 11 dígitos no máximo
+        valor = valor.substring(0, 11);
+
+        // Aplica a máscara conforme a quantidade de dígitos digitados
+        if (valor.length > 10) {
+            // Celular: (XX) XXXXX-XXXX
+            valor = valor.replace(/^(\d{2})(\d{5})(\d{4}).*/, "($1) $2-$3");
+        } else {
+            // Fixo: (XX) XXXX-XXXX
+            valor = valor.replace(/^(\d{2})(\d{4})(\d{0,4}).*/, "($1) $2-$3");
+        }
+
+        campoTelefone.value = valor;
+
+    });
+
+
+    // ============================================
+    //  VALIDAÇÃO DO FORMULÁRIO NO ENVIO
+    // ============================================
+
+    // Seleciona o formulário pelo id
+    var formulario = document.getElementById("formContato");
+
+    formulario.addEventListener("submit", function (evento) {
+
+        // Impede o envio padrão do formulário enquanto validamos os campos
+        evento.preventDefault();
+
+        // Pega os valores digitados em cada campo (trim remove espaços nas pontas)
+        var nome     = document.getElementById("nome").value.trim();
+        var email    = document.getElementById("email").value.trim();
+        var telefone = document.getElementById("telefone").value.trim();
+        var mensagem = document.getElementById("mensagem").value.trim();
+
+
+        // ---- Validação do Nome ----
+
+        if (nome === "") {
+            alert("Por favor, preencha o campo Nome.");
+            document.getElementById("nome").focus();
+            return;
+        }
+
+        if (nome.length < 3) {
+            alert("O nome deve ter pelo menos 3 letras.");
+            document.getElementById("nome").focus();
+            return;
+        }
+
+
+        // ---- Validação do E-mail ----
+        // A regex verifica o formato: qualquer coisa @ qualquer coisa . qualquer coisa
+        var emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!emailValido.test(email)) {
+            alert("Por favor, informe um e-mail válido (exemplo: nome@email.com).");
+            document.getElementById("email").focus();
+            return;
+        }
+
+
+        // ---- Validação do Telefone ----
+        // A regex verifica se o formato da máscara foi aplicado corretamente
+        var telefoneValido = /^\(\d{2}\)\s?\d{4,5}-\d{4}$/;
+
+        if (!telefoneValido.test(telefone)) {
+            alert("Telefone inválido. Exemplo: (21) 99999-9999");
+            document.getElementById("telefone").focus();
+            return;
+        }
+
+
+        // ---- Validação da Mensagem ----
+
+        if (mensagem.length < 10) {
+            alert("A mensagem deve ter pelo menos 10 caracteres.");
+            document.getElementById("mensagem").focus();
+            return;
+        }
+
+
+        // ---- Todos os campos estão corretos ----
+        alert("Mensagem enviada com sucesso! Entraremos em contato em breve.");
+
+        // Limpa todos os campos de uma vez usando o método reset do formulário
+        formulario.reset();
+
+    });
+
+});
