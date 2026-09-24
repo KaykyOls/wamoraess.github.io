@@ -1,13 +1,3 @@
-//VALIDAÇÃO DA SOLICITAÇÃO DE PRODUTOS
-document.addEventListener("DOMContentLoaded", function () {
-    const botaoSolicitar = document.querySelectorAll('.btn-amarelo')
-
-    botaoSolicitar.forEach(botao => {
-        botao.addEventListener('click', function (event) {
-            alert("Seu produto foi solicitado com sucesso!");
-        });
-    });
-});
 
 //VALIDAÇÃO DA PÁGINA DE CONTATO
 
@@ -18,12 +8,6 @@ document.addEventListener("DOMContentLoaded", function () {
     //  (XX) XXXX-XXXX  ou  (XX) XXXXX-XXXX
 
     let campoTelefone = document.getElementById("telefone");
-
-    if (campoTelefone) {
-        campoTelefone.addEventListener("input", function () {
-
-        });
-    }
 
     campoTelefone.addEventListener("input", function () {
 
@@ -109,10 +93,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
         // Todos os campos estão corretos
-        alert("Mensagem enviada com sucesso! Entraremos em contato em breve.");
+        alert("Solicitação enviada com sucesso! Entraremos em contato em breve.");
 
         // Limpa todos os campos de uma vez usando o método reset do formulário
         formulario.reset();
+
+
 
     });
 
