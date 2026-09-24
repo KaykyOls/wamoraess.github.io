@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     botaoSolicitar.forEach(botao => {
         botao.addEventListener('click', function (event) {
-            event.preventDefault();
             alert("Seu produto foi solicitado com sucesso!");
         });
     });
