@@ -106,9 +106,12 @@ main {
 /* BANNER (index.html) */
 
 .banner {
-    background-color: #111111;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('Imagens/images.carros.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: #ffffff;
-    padding: 60px 40px;
+    padding: 80px 40px;
     text-align: center;
     border-radius: 8px;
     margin-bottom: 40px;
@@ -448,14 +451,23 @@ main {
 /* PÁGINA NOVIDADES */
 
 .novidades-grid {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+   flex-wrap: wrap;
     gap: 25px;
+}
+
+.novidades-grid2 {
+    display: grid;
+   flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 35px;
 }
 
 .card-novidade {
     flex: 1;
     min-width: 260px;
+    width: 100%;
     border: 1px solid #dddddd;
     border-radius: 8px;
     overflow: hidden;
@@ -469,7 +481,16 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+    border-radius: 8px 8px 0 0;
     font-size: 44px;
+}
+.card-novidade-img-placeholder img {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+
 }
 
 .card-novidade-info {
