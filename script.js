@@ -1,27 +1,35 @@
-// ============================================
-//  W.A Moraes Peças e Acessórios Automotivos
-//  Arquivo: js/script.js
-//  Aluno: 1º Trimestre - Desenvolvimento Front-End
-//  Funcionalidade: Validação do formulário de contato
-// ============================================
+//VALIDAÇÃO DA SOLICITAÇÃO DE PRODUTOS
+document.addEventListener("DOMContentLoaded", function () {
+    const botaoSolicitar = document.querySelectorAll('.btn-amarelo')
 
+    botaoSolicitar.forEach(botao => {
+        botao.addEventListener('click', function (event) {
+            event.preventDefault();
+            alert("Seu produto foi solicitado com sucesso!");
+        });
+    });
+});
+
+//VALIDAÇÃO DA PÁGINA DE CONTATO
 
 // Aguarda o carregamento completo da página antes de executar o código
 document.addEventListener("DOMContentLoaded", function () {
 
-
-    // ============================================
-    //  MÁSCARA DO TELEFONE
     //  Formata o número automaticamente enquanto o usuário digita:
     //  (XX) XXXX-XXXX  ou  (XX) XXXXX-XXXX
-    // ============================================
 
-    var campoTelefone = document.getElementById("telefone");
+    let campoTelefone = document.getElementById("telefone");
+
+    if (campoTelefone) {
+        campoTelefone.addEventListener("input", function () {
+
+        });
+    }
 
     campoTelefone.addEventListener("input", function () {
 
         // Remove tudo que não for número
-        var valor = campoTelefone.value.replace(/\D/g, "");
+        let valor = campoTelefone.value.replace(/\D/g, "");
 
         // Limita a 11 dígitos no máximo
         valor = valor.substring(0, 11);
@@ -40,12 +48,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-    // ============================================
     //  VALIDAÇÃO DO FORMULÁRIO NO ENVIO
-    // ============================================
 
     // Seleciona o formulário pelo id
-    var formulario = document.getElementById("formContato");
+    let formulario = document.getElementById("formContato");
 
     formulario.addEventListener("submit", function (evento) {
 
@@ -53,13 +59,13 @@ document.addEventListener("DOMContentLoaded", function () {
         evento.preventDefault();
 
         // Pega os valores digitados em cada campo (trim remove espaços nas pontas)
-        var nome     = document.getElementById("nome").value.trim();
-        var email    = document.getElementById("email").value.trim();
-        var telefone = document.getElementById("telefone").value.trim();
-        var mensagem = document.getElementById("mensagem").value.trim();
+        let nome = document.getElementById("nome").value.trim();
+        let email = document.getElementById("email").value.trim();
+        let telefone = document.getElementById("telefone").value.trim();
+        let mensagem = document.getElementById("mensagem").value.trim();
 
 
-        // ---- Validação do Nome ----
+        //  Validação do Nome 
 
         if (nome === "") {
             alert("Por favor, preencha o campo Nome.");
@@ -75,8 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
         // ---- Validação do E-mail ----
-        // A regex verifica o formato: qualquer coisa @ qualquer coisa . qualquer coisa
-        var emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        let emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
         if (!emailValido.test(email)) {
             alert("Por favor, informe um e-mail válido (exemplo: nome@email.com).");
@@ -86,8 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
         // ---- Validação do Telefone ----
-        // A regex verifica se o formato da máscara foi aplicado corretamente
-        var telefoneValido = /^\(\d{2}\)\s?\d{4,5}-\d{4}$/;
+        let telefoneValido = /^\(\d{2}\)\s?\d{4,5}-\d{4}$/;
 
         if (!telefoneValido.test(telefone)) {
             alert("Telefone inválido. Exemplo: (21) 99999-9999");
@@ -105,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
 
-        // ---- Todos os campos estão corretos ----
+        // Todos os campos estão corretos
         alert("Mensagem enviada com sucesso! Entraremos em contato em breve.");
 
         // Limpa todos os campos de uma vez usando o método reset do formulário

@@ -1,8 +1,3 @@
-/* ============================================
-   W.A Moraes Peças e Acessórios Automotivos
-   Arquivo: style.css
-   Desenvolvimento Front-End II
-   ============================================ */
 
 /* Reset básico */
 * {
@@ -17,9 +12,7 @@ body {
     color: #111111;
 }
 
-/* ============================================
-   HEADER E NAVEGAÇÃO
-   ============================================ */
+/* HEADER E NAVEGAÇÃO */
 
 header {
     background-color: #111111;
@@ -102,9 +95,7 @@ nav ul li a.ativo {
     color: #111111;
 }
 
-/* ============================================
-   MAIN / CONTEÚDO PRINCIPAL
-   ============================================ */
+/* MAIN / CONTEÚDO PRINCIPAL */
 
 main {
     max-width: 1100px;
@@ -112,9 +103,7 @@ main {
     padding: 30px 20px;
 }
 
-/* ============================================
-   BANNER (index.html)
-   ============================================ */
+/* BANNER (index.html) */
 
 .banner {
     background-color: #111111;
@@ -153,9 +142,7 @@ main {
     background-color: #e6bf00;
 }
 
-/* ============================================
-   DESTAQUES E SEÇÕES
-   ============================================ */
+/* DESTAQUES E SEÇÕES */
 
 .titulo-secao {
     text-align: center;
@@ -220,9 +207,7 @@ main {
     line-height: 1.7;
 }
 
-/* ============================================
-   PÁGINA SOBRE
-   ============================================ */
+/* PÁGINA SOBRE */
 
 .sobre-intro {
     display: flex;
@@ -328,9 +313,7 @@ main {
     font-weight: bold;
 }
 
-/* ============================================
-   PÁGINA PRODUTOS (produtos.html) - CATEGORIAS
-   ============================================ */
+/* PÁGINA PRODUTOS (produtos.html) - CATEGORIAS */
 
 .intro-produtos {
     background-color: #f9f9f9;
@@ -379,9 +362,7 @@ main {
     margin-bottom: 15px;
 }
 
-/* ============================================
-   PÁGINAS DE CATEGORIA — CARDS BOOTSTRAP
-   ============================================ */
+/*  PÁGINAS DE CATEGORIA — CARDS BOOTSTRAP */
 
 .link-voltar {
     display: inline-block;
@@ -464,9 +445,7 @@ main {
     margin-bottom: 10px;
 }
 
-/* ============================================
-   PÁGINA NOVIDADES
-   ============================================ */
+/* PÁGINA NOVIDADES */
 
 .novidades-grid {
     display: flex;
@@ -527,9 +506,7 @@ main {
     margin-top: 10px;
 }
 
-/* ============================================
-   PÁGINA CONTATO
-   ============================================ */
+/*  PÁGINA CONTATO */
 
 .contato-wrapper {
     display: flex;
@@ -645,9 +622,7 @@ main {
     border-color: #FFD400;
 }
 
-/* ============================================
-   FOOTER
-   ============================================ */
+/*  FOOTER */
 
 footer {
     background-color: #111111;
@@ -692,9 +667,7 @@ footer {
     margin-right: auto;
 }
 
-/* ============================================
-   RESPONSIVIDADE - MEDIA QUERY
-   ============================================ */
+/* RESPONSIVIDADE - MEDIA QUERY */
 
 @media (max-width: 700px) {
 
