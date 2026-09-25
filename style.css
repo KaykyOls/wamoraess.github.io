@@ -723,6 +723,10 @@ footer {
         flex-direction: column;
     }
 
+.novidades-grid {
+    grid-template-columns: 1fr;
+    }
+
     .footer-conteudo {
         flex-direction: column;
         gap: 20px;
